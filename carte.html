@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartes de visite - OBK DESIGN</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    /* Nav */
+    nav {
+      background-color: #4049B5;
+      padding: 15px 20px;
+    }
+    nav .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .nav-logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Galerie Cartes */
+    .gallery-section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .gallery-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0f4b4b;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #4049B5;
+      color: #ccc;
+      display: flex;
+      justify-content: space-around;
+      padding: 2rem 1rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+    footer div {
+      flex: 1 1 250px;
+      margin: 0 1rem;
+    }
+    footer h3 {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #3f9164;
+      padding-bottom: 0.3rem;
+      font-weight: 700;
+      color: #d6b964;
+    }
+    footer p, footer a {
+      color: #ccc;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    footer a:hover {
+      color: #d6b964;
+    }
+    footer .social-icons a {
+      margin-right: 10px;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="nav-logo">OBK DESIGN</a>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="carte.html">Cartes</a></li>
+        <li><a href="apropos.html">Apropos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Galerie Cartes -->
+  <section class="gallery-section">
+    <h2>Nos Cartes de visite</h2>
+    <div class="gallery-grid">
+      <img src="images/carte1.jpg" alt="Carte 1">
+      <img src="images/carte2.jpg" alt="Carte 2">
+      <img src="images/carte3.jpg" alt="Carte 3">
+      <img src="images/carte4.jpg" alt="Carte 4">
+      <img src="images/carte5.jpg" alt="Carte 5">
+      <img src="images/carte6.jpg" alt="Carte 6">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h3>À propos</h3>
+      <p>OBK DESIGN est une agence experte en création graphique et design, engagée à sublimer vos projets avec créativité et professionnalisme.</p>
+    </div>
+    <div>
+      <h3>Liens rapides</h3>
+      <a href="index.html">Accueil</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="service.html">Services</a>
+      <a href="carte.html">Cartes</a>
+      <a href="contact.html">Contact</a>
+      <a href="apropos.html">Apropos</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>✉ contact@obkdesign.com</p>
+      <p>📞 +243 999 000 000</p>
+      <p>📍 Kinshasa, RDC</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">FB 📘</a>
+        <a href="#" aria-label="Instagram">Insta 📸</a>
+      </div>
+    </div>
+    &copy; 2025 OBK DESIGN. Tous droits réservés.
+  </footer>
+
+</body>
+</html>
