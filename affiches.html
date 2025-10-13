@@ -15,8 +15,6 @@
       background: #f0f0f0;
       color: #333;
     }
-
-    /* Nav */
     nav {
       background-color: #4049B5;
       padding: 15px 20px;
@@ -42,34 +40,46 @@
       text-decoration: none;
     }
 
-    /* Galerie Affiches */
-    .gallery-section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .gallery-section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #0f4b4b;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      background: white;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery-grid img:hover {
-      transform: scale(1.05);
-    }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+      }
 
     /* FOOTER */
     footer {
@@ -107,8 +117,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Nav -->
   <nav>
     <div class="nav-container">
       <a href="#" class="nav-logo">OBK DESIGN</a>
@@ -122,21 +130,24 @@
       </ul>
     </div>
   </nav>
-
-  <!-- Galerie Affiches -->
-  <section class="gallery-section">
-    <h2>Nos Affiches</h2>
-    <div class="gallery-grid">
-      <img src="images/affiche1.jpg" alt="Affiche 1">
-      <img src="images/affiche2.jpg" alt="Affiche 2">
-      <img src="images/affiche3.jpg" alt="Affiche 3">
-      <img src="images/affiche4.jpg" alt="Affiche 4">
-      <img src="images/affiche5.jpg" alt="Affiche 5">
-      <img src="images/affiche6.jpg" alt="Affiche 6">
-    </div>
-  </section>
-
-  <!-- Footer -->
+<section class="gallery-section">
+  <h2>Nos Affiches</h2>
+  <div class="gallery-grid">
+    <img src="images/affiche1.jpg" alt="Affiche 1" class="gallery-img">
+    <img src="images/affiche2.jpg" alt="Affiche 2" class="gallery-img">
+    <img src="images/affiche3.jpg" alt="Affiche 3" class="gallery-img">
+    <img src="images/affiche4.jpg" alt="Affiche 4" class="gallery-img">
+    <img src="images/affiche5.jpg" alt="Affiche 5" class="gallery-img">
+    <img src="images/affiche6.jpg" alt="Affiche 6" class="gallery-img">
+    <img src="images/affiche7.jpg" alt="Affiche 7" class="gallery-img">
+    <img src="images/affiche8.jpg" alt="Affiche 8" class="gallery-img">
+    <img src="images/affiche9.jpg" alt="Affiche 9" class="gallery-img">
+    <img src="images/affiche10.jpg" alt="Affiche 10" class="gallery-img">
+    <img src="images/affiche11.jpg" alt="Affiche 11" class="gallery-img">
+    <img src="images/affiche12.jpg" alt="Affiche 12" class="gallery-img">
+    <img src="images/affiche13.jpg" alt="Affiche 13" class="gallery-img">
+  </div>
+</section>
   <footer>
     <div>
       <h3>À propos</h3>
@@ -164,6 +175,22 @@
     </div>
     &copy; 2025 OBK DESIGN. Tous droits réservés.
   </footer>
+  <script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const images = document.querySelectorAll('.gallery-img');
+  const closeBtn = document.querySelector('.close');
 
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+lightbox.style.display = 'none';
+  });
+  </script>
 </body>
 </html>
