@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OBK DESIGN</title>
+<style>
+  /* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #fff;
+  }
+  
+  body, html {
+  height: 100%;
+  margin: 0;
+}
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  /* HEADER */
+  header {
+    background: #4049B5;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  header p {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav {
+    background: #0F4B4B;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem 0;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    background: #3f9164;
+  }
+
+  /* MIDDLE SECTION */
+  main {
+    position: relative;
+    background: url('images/image4.jpg') no-repeat center center/cover;
+    padding: 3rem 1rem 4rem;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .site-header {
+  background-color: #2e3192;
+  color: white;
+  padding: 10px 20px;
+}
+
+.slogan {
+  text-align: left;
+  font-size: 17px;
+  margin: 0 0 4px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  padding: 5px 10px;
+  border-radius: 5px; /* facultatif : coin légèrement arrondis */
+}
+
+.logo-title h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #0f4b4b;
+  border-radius: 3px;
+}
+
+.main-nav a:hover {background-color: #0a3636;
+}
+ .petal-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.petal {
+  position: absolute;
+  width: 130px;
+  height: 180px;
+  background: rgba(15, 75, 75, 0.8);
+  border-radius: 80% 50% 80% 50% / 60% 90% 10% 40%;
+  box-shadow: 0 0 10px #1f4b35;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.petal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.petal:hover {
+  transform: scale(1.05);
+}
+
+/* Positionnement stable des pétales */
+.petal1 {
+  top: 0;
+  left: 85px;
+}
+
+.petal2 {
+  top: 60px;
+  right: 0;
+  transform: rotate(90deg);
+}
+
+.petal3 {
+  bottom: 0;
+  left: 85px;
+}
+
+.petal4 {
+  top: 60px;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+  /* LIGHTBOX */
+  #lightbox {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px #000;
+  }
+  #lightbox.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #4049B5;
+    color: #ccc;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+  footer div {
+    flex: 1 1 250px;
+    margin: 0 1rem;
+  }
+  footer h3 {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #3f9164;
+    padding-bottom: 0.3rem;
+    font-weight: 700;
+    color: #d6b964;
+  }
+  footer p, footer a {
+    color: #ccc;
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  footer a:hover {
+    color: #d6b964;
+  }
+  footer .social-icons a {
+    margin-right: 10px;
+    font-size: 1.4rem;
+  }
+  /* Responsive */
+  @media(max-width: 600px) {
+    nav {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    main {
+      padding: 2rem 1rem 3rem;
+    }
+    .petal-container {
+      width: 280px;
+      height: 280px;
+        }
+    .petal {
+      width: 120px;
+      height: 150px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-content">
+    <div class="logo-title">
+      <img src="images/obk.jpg" alt="Logo OBK">
+      <h1>OBK DESIGN</h1>
+    </div>
+  <p class="slogan">Votre partenaire fiable pour la création graphique et design</p>
+  <nav class="main-nav">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="service.thml">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="apropos.html">Apropos</a>
+  </nav> </div>
+</header>
+
+<main>
+  <div class="petal-container">
+    <div class="petal petal1" data-src="images/image1.jpg"><img src="images/image1.jpg" alt="Image 1" /></div>
+    <div class="petal petal2" data-src="images/image2.jpg"><img src="images/image2.jpg" alt="Image 2" /></div>
+    <div class="petal petal3" data-src="images/image3.jpg"><img src="images/image3.jpg" alt="Image 3" /></div>
+    <div class="petal petal4" data-src="images/image4.jpg"><img src="images/image1.jpg" alt="Image 4" /></div>
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <img src="" alt="Full Image" id="lightboxImg" />
+</div>
+
+<footer>
+  <div>
+    <h3>À propos</h3>
+<p>OBK DESIGN est une agence experte en création graphique et design, engagée à sublimer vos projets avec créativité et professionnalisme.</p>
+  </div>
+  <div>
+    <h3>Liens rapides</h3>
+    <a href="index.html">Accueil</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="apropos.html">Apropos</a>
+  </div>
+  <div>
+    <h3>Contact</h3>
+    <p>✉ obkdigital6@gmail.com</p>
+    <p>📞 +243 998 077 669</p>
+    <p>📍 Kinshasa, RDC</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61571431674434" aria-label="Facebook">Facebook</a>
+      <a href="https://www.instagram.com/obk.digital?igsh=YzljYTk1ODg3Zg==" aria-label="Instagram">Instagram</a>
+      <a href="https://www.linkedin.com/in/obk-digital-3a6253385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="Instagram">LinkedIn</a>
+    </div>
+  </div>
+  &copy; 2025 OBK DESIGN. Tous droits réservés.
+</footer>
+
+<script>
+  const petals = document.querySelectorAll('.petal');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('closeBtn');
+
+  petals.forEach(petal => {
+    petal.addEventListener('click', () => {
+      const src = petal.getAttribute('data-src');
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    }
+  });
+</script>
+
+</body>
+</html>
