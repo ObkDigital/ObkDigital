@@ -49,8 +49,6 @@
   nav a:hover, nav a.active {
     background: #3f9164;
   }
-
-  
   main {
     position: relative;
     background: url('images/sample1.jpg') no-repeat center center/cover;
@@ -90,7 +88,6 @@
   width: 60px;
   object-fit: cover;
   padding: 5px 10px;
-  border-radius: 5px; /* facultatif : coin légèrement arrondis */
 }
 
 .logo-title h1 {
@@ -113,7 +110,6 @@
   padding: 60px 30px;
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -121,18 +117,19 @@
   font-size: 2.5em;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  color: #3f9164;
 }
 
 .designer-presentation .tagline {
   font-size: 1.2em;
   margin-bottom: 25px;
   color: #ccc;
+  color: black;
 }
-
 .designer-presentation .btn {
   display: inline-block;
   padding: 12px 25px;
-  background: #ff4d4f;
+  background: #4049B5;
   color: white;
   border-radius: 6px;
   text-decoration: none;
@@ -183,14 +180,6 @@
     }
     main {
       padding: 2rem 1rem 3rem;
-    }
-    .petal-container {
-      width: 280px;
-      height: 280px;
-        }
-    .petal {
-      width: 120px;
-      height: 150px;
     }
   }
 </style>
@@ -245,33 +234,5 @@
   </div>
   &copy; 2025 OBK DESIGN. Tous droits réservés.
 </footer>
-
-<script>
-  const petals = document.querySelectorAll('.petal');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const closeBtn = document.getElementById('closeBtn');
-
-  petals.forEach(petal => {
-    petal.addEventListener('click', () => {
-      const src = petal.getAttribute('data-src');
-      lightboxImg.src = src;
-      lightbox.style.display = 'flex';
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-
-  lightbox.addEventListener('click', (e) => {
-if (e.target === lightbox) {
-      lightbox.style.display = 'none';
-      lightboxImg.src = '';
-    }
-  });
-</script>
-
 </body>
 </html>
