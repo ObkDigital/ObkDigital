@@ -119,86 +119,43 @@
 
 .main-nav a:hover {background-color: #0a3636;
 }
- .petal-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: auto;
+.designer-presentation {
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+  color: #fff;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.petal {
-  position: absolute;
-  width: 130px;
-  height: 180px;
-  background: rgba(15, 75, 75, 0.8);
-  border-radius: 80% 50% 80% 50% / 60% 90% 10% 40%;
-  box-shadow: 0 0 10px #1f4b35;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.designer-presentation h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-.petal img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.designer-presentation .tagline {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #ccc;
 }
 
-.petal:hover {
-  transform: scale(1.05);
+.designer-presentation .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff4d4f;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-/* Positionnement stable des pétales */
-.petal1 {
-  top: 0;
-  left: 85px;
-}
-
-.petal2 {
-  top: 60px;
-  right: 0;
-  transform: rotate(90deg);
-}
-
-.petal3 {
-  bottom: 0;
-  left: 85px;
-}
-
-.petal4 {
-  top: 60px;
-  left: 0;
-  transform: rotate(-90deg);
-}
-
-  /* LIGHTBOX */
-  #lightbox {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+.designer-presentation .btn:hover {
+  background: #e03e3e;
   }
-  #lightbox img {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 8px;
-    box-shadow: 0 0 30px #000;
-  }
-  #lightbox.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2.5rem;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  /* FOOTER */
+  
   footer {
     background: #4049B5;
     color: #ccc;
@@ -231,7 +188,6 @@
     margin-right: 10px;
     font-size: 1.4rem;
   }
-  /* Responsive */
   @media(max-width: 600px) {
     nav {
       flex-wrap: wrap;
@@ -268,20 +224,13 @@
     <a href="apropos.html">Apropos</a>
   </nav> </div>
 </header>
-
 <main>
-  <div class="petal-container">
-    <div class="petal petal1" data-src="images/affiche0.jpg"><img src="images/affiche0.jpg" alt="Image 1" /></div>
-    <div class="petal petal2" data-src="images/affiche0.jpg"><img src="images/affiche0.jpg" alt="Image 2" /></div>
-    <div class="petal petal3" data-src="images/affiche0.jpg"><img src="images/affiche0.jpg" alt="Image 3" /></div>
-    <div class="petal petal4" data-src="images/affiche0.jpg"><img src="images/affiche0.jpg" alt="Image 4" /></div>
-  </div>
-</main>
-<!-- Lightbox -->
-<div id="lightbox">
-  <span class="close-btn" id="closeBtn">&times;</span>
-  <img src="" alt="Full Image" id="lightboxImg" />
+<div class="designer-presentation">
+  <h1>John Doe - Designer Graphiste</h1>
+  <p class="tagline">Créateur d'identités visuelles, UI/UX et illustrations haut de gamme.</p>
+  <a href="#portfolio" class="btn">Voir Portfolio</a>
 </div>
+</main>
 <footer>
   <div>
     <h3>À propos</h3>
@@ -296,7 +245,7 @@
     <a href="apropos.html">Apropos</a>
   </div>
   <div>
-    <h3>Contact</h3>
+    <h3>Cntact</h3>
     <p>✉ obkdigital6@gmail.com</p>
     <p>📞 +243 998 077 669</p>
     <p>📍 Kinshasa, RDC</p>
