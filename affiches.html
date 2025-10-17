@@ -80,6 +80,20 @@
   font-size: 30px;
   cursor: pointer;
       }
+    #lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
 
     footer {
       background: #4049B5;
@@ -130,21 +144,35 @@
 <section class="gallery-section">
   <h2>Nos Affiches</h2>
   <div class="gallery-grid">
-    <img src="images/affiche6.jpg" alt="Affiche 1" class="gallery-img">
-    <img src="images/affiche2.jpg" alt="Affiche 2" class="gallery-img">
-    <img src="images/affiche5.jpg" alt="Affiche 3" class="gallery-img">
-    <img src="images/affiche3.jpg" alt="Affiche 4" class="gallery-img">
-    <img src="images/affiche4.jpg" alt="Affiche 5" class="gallery-img">
-    <img src="images/affiche1.jpg" alt="Affiche 6" class="gallery-img">
-    <img src="images/affiche7.jpg" alt="Affiche 7" class="gallery-img">
-    <img src="images/affiche8.jpg" alt="Affiche 8" class="gallery-img">
-    <img src="images/affiche9.jpg" alt="Affiche 9" class="gallery-img">
-    <img src="images/affiche10.jpg" alt="Affiche 10" class="gallery-img">
-    <img src="images/affiche11.jpg" alt="Affiche 11" class="gallery-img">
-    <img src="images/affiche12.jpg" alt="Affiche 12" class="gallery-img">
-    <img src="images/affiche13.jpg" alt="Affiche 13" class="gallery-img">
+    <img src="images/affiche6.jpg" alt="Affiche 1" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche2.jpg" alt="Affiche 2" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche5.jpg" alt="Affiche 3" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche3.jpg" alt="Affiche 4" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche4.jpg" alt="Affiche 5" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche1.jpg" alt="Affiche 6" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche7.jpg" alt="Affiche 7" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche8.jpg" alt="Affiche 8" class="gallery-img"onclick="openLightbox(this)">
+    <img src="images/affiche9.jpg" alt="Affiche 9" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche10.jpg" alt="Affiche 10" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche11.jpg" alt="Affiche 11" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche12.jpg" alt="Affiche 12" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/affiche13.jpg" alt="Affiche 13" class="gallery-img" onclick="openLightbox(this)">
+    <img src="images/photo1.jpg" alt="img1" onclick="openLightbox(this)">
+      <img src="images/photo2.jpg" alt="img2" onclick="openLightbox(this)">
+      <img src="images/photo3.jpg" alt="img3" onclick="openLightbox(this)">
+      <img src="images/photo6.jpg" alt="img6" onclick="openLightbox(this)">
+      <img src="images/photo7.jpg" alt="img7" onclick="openLightbox(this)">
+      <img src="images/photo8.jpg" alt="img8" onclick="openLightbox(this)">
+      <img src="images/photo9.jpg" alt="img9" onclick="openLightbox(this)">
+      <img src="images/photo10.jpg" alt="img10" onclick="openLightbox(this)">
+      <img src="images/photo12.jpg" alt="img12" onclick="openLightbox(this)">
+      <img src="images/photo13.jpg" alt="img13" onclick="openLightbox(this)">   
   </div>
 </section>
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+<footer>
   <footer>
     <div>
       <h3>À propos</h3>
