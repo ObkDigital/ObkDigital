@@ -95,6 +95,44 @@ body {
   max-height: 90%;
   border-radius: 10px;
 }
+   .menu-section {
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  margin: 20px auto;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 12px;
+}
+
+.menu-list li a {
+  display: block;
+  text-decoration: none;
+  background-color: #4049b5;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+
+.menu-list li a:hover {
+  background-color: #d6b964;
+  color: #222;
+  transform: translateY(-2px);
+  }
   
   footer {
     background: #4049B5;
@@ -184,17 +222,18 @@ body {
       <img src="images/carte3.jpg" alt="img6" onclick="openLightbox(this)">
       <img src="images/photo5.jpg" alt="img7" onclick="openLightbox(this)">
       <img src="images/photo4.jpg" alt="img8" onclick="openLightbox(this)">
-      <img src="images/photo9.jpg" alt="img9" onclick="openLightbox(this)">
-      <img src="images/photo10.jpg" alt="img10" onclick="openLightbox(this)">
-      <img src="images/photo11.jpg" alt="img11" onclick="openLightbox(this)">
-      <img src="images/photo12.jpg" alt="img12" onclick="openLightbox(this)">
-      <img src="images/photo13.jpg" alt="img13" onclick="openLightbox(this)">
-      <img src="images/photo14.jpg" alt="img14" onclick="openLightbox(this)">
-      <img src="images/photo15.jpg" alt="img15" onclick="openLightbox(this)">
+      </div>
+
+    <div class="menu-section">
+      <h2>Voir Plus</h2>
+  <ul class="menu-list">
+    <li><a href="affiches.html">Affiches</a></li>      
+    <li><a href="logo.html">Logos</a></li>             
+    <li><a href="carte.html">Cartes de Visite</a></li> 
+  </ul>
     </div>
   </main>
 
-  <!-- Lightbox -->
   <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="">
   </div>
